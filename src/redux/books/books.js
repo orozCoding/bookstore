@@ -1,15 +1,31 @@
-import React from 'react';
-import booksList from './bookList';
-import Book from './book';
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-const Books = () => (
-  <ul>
-    {
-    booksList.map((book) => (
-      <Book key={book.id} book={book} />
-    ))
+const initialState = [];
+
+export const addBook = (book) => ({
+  type: ADD_BOOK,
+  playload: {
+    title: book.title,
+    author: book.author,
+    id: book.id,
+  },
+});
+
+export const removeBook = (playload) => ({
+  type: REMOVE_BOOK,
+  playload,
+});
+
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_BOOK:
+      return [...state, action.playload];
+    case REMOVE_BOOK:
+      return state.filter((book) => book.id !== action.playload);
+    default:
+      return state;
   }
-  </ul>
-);
+};
 
-export default Books;
+export default reducer;
