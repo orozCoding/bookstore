@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import NavBar from './components/navBar.js';
 import Books from './redux/books/books';
 import Categories from './redux/categories/categories';
 import Form from './components/form';
+import NavBar from './components/navBar';
 
 function App() {
   return (
