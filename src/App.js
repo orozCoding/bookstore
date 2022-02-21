@@ -4,8 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Books from './components/books/books';
 import Categories from './components/categories';
 import Form from './components/books/form';
-// eslint-disable-next-line import/extensions
-import NavBar from './components/navBar';
+import NavBar from './components/naviBar';
 
 function App() {
   return (
