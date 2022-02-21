@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Books from './redux/books/books';
 import NavBar from './components/navBar';
 import Categories from './redux/categories/categories';
-import Form from './components/from';
+import Form from './components/form';
 
 function App() {
   return (
