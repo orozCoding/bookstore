@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Books from './components/books/books';
 import Categories from './components/categories';
-import Form from './components/books/form';
 import NavBar from './components/naviBar';
+import BookContainer from './components/books/bookContainer';
 
 function App() {
   return (
@@ -15,10 +14,7 @@ function App() {
           <Route
             path="/"
             element={(
-              <>
-                <Books />
-                <Form />
-              </>
+              <BookContainer />
             )}
           />
           <Route path="/Categories" element={<Categories />} />
