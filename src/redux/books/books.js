@@ -1,15 +1,27 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
-import booksReducer from './books/books';
+const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
-const reducer = combineReducers({
-  booksReducer,
-  // additional reducers could be added here
+const initialState = [];
+
+export const addBook = (playload) => ({
+  type: ADD_BOOK,
+  playload,
 });
 
-const store = createStore(
-  reducer,
-  applyMiddleware(logger),
-);
+export const removeBook = (playload) => ({
+  type: REMOVE_BOOK,
+  playload,
+});
 
-export default store;
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_BOOK:
+      return [...state, action.playload];
+    case REMOVE_BOOK:
+      return state.filter((book) => book.id !== action.playload);
+    default:
+      return state;
+  }
+};
+
+export default reducer;
