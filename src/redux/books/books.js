@@ -3,9 +3,13 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
 const initialState = [];
 
-export const addBook = (playload) => ({
+export const addBook = (book) => ({
   type: ADD_BOOK,
-  playload,
+  playload: {
+    title: book.title,
+    author: book.author,
+    id: book.id,
+  },
 });
 
 export const removeBook = (playload) => ({

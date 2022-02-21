@@ -14,9 +14,11 @@ const Form = () => {
       author: e.target.author.value,
     };
     dispatch(addBook(newBook));
+    e.target.title.value = '';
+    e.target.author.value = '';
   };
   return (
-    <form onSubmit={(e) => submiteBookToStore(e)}>
+    <form onSubmit={submiteBookToStore}>
       <input type="text" placeholder="Title" name="title" />
       <input type="text" placeholder="Author" name="author" />
       <button type="submit">Add Book</button>
