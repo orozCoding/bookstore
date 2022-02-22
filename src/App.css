@@ -10,6 +10,7 @@
 html,
 body {
   width: 100%;
+  min-width: 1040px;
   font-family: 'Roboto', sans-serif;
   color: #121212;
 }
