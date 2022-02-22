@@ -21,11 +21,20 @@ const Form = () => {
     e.target.category.value = '';
   };
   return (
-    <form onSubmit={submiteBookToStore}>
-      <input type="text" placeholder="Title" name="title" />
-      <input type="text" placeholder="Category" name="category" />
-      <button type="submit">Add Book</button>
-    </form>
+    <div className="formContainer d-flex col start">
+      <div className="formTitle  mon bold">ADD NEW BOOK</div>
+      <form id="newBookForm" className="d-flex" onSubmit={submiteBookToStore}>
+        <input type="text" placeholder="Title" name="title" className="mon" required />
+        <select type="text" placeholder="Category" name="category" id="category" className="mon" required>
+          <option value="" selected disabled hidden>Choose Category</option>
+          <option value="Action">Action</option>
+          <option value="Drama">Drama</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Thriller">Thriller</option>
+        </select>
+        <button type="submit" className="click">Add Book</button>
+      </form>
+    </div>
   );
 };
 

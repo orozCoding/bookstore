@@ -38,7 +38,7 @@ const Book = (props) => {
         <div className="bookChapterContainer d-flex col">
           <div><p className="bookChapterTitle">CURRENT CHAPTER</p></div>
           <div><p className="bookCurrentChapter">Chapter 17</p></div>
-          <button type="button">UPDATE PROGRESS</button>
+          <button type="button" className="click">UPDATE PROGRESS</button>
         </div>
       </div>
     </li>
