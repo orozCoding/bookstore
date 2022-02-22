@@ -116,11 +116,90 @@ a:visited {
   justify-content: space-between;
   padding: 30px;
   background-color: #fff;
-  border: 2px solid red;
+  border: 1px solid #e8e8e8;
 }
 
 .bookInfoContainer {
   align-items: flex-start;
+  gap: 10px;
+}
+
+.bookCoreInfo {
+  align-items: flex-start;
+}
+
+.bookCategory {
+  color: darkgray;
+}
+
+.bookTitle {
+  margin-top: 10px;
+  font-size: 30px;
+  color: #121212;
+}
+
+.bookAuthor {
+  color: #4386bf;
+}
+
+.bookProgressContainer {
+  margin-right: 50px;
+  gap: 100px;
+}
+
+.bookStats {
+  gap: 30px;
+}
+
+.bookStatsMetricsContainer {
+  align-items: flex-start;
+}
+
+.bookStatsMetricsNumber {
+  color: #121212;
+  font-size: 30px;
+}
+
+.bookStatsMetricsStatus {
+  color: darkgray;
+}
+
+.bookChapterContainer {
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.bookChapterContainer button {
+  margin-top: 15px;
+}
+
+.bookChapterTitle {
+  font-size: 12px;
+  color: darkgray;
+}
+
+.bookRemoveButton,
+.bookInfoActions {
+  background: none;
+  color: #4386bf;
+  width: fit-content;
+  font-size: 17px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bookStatsCircle {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-right: double 5px transparent;
+  border-bottom: double 5px transparent;
+  border-radius: 50%;
+  background-image:
+    linear-gradient(white, white),
+    linear-gradient(to bottom, #307bbe, #379cf6);
+  border-image-slice: 44;
+  background-origin: border-box;
+  -webkit-background-clip: content-box, border-box;
+  background-clip: content-box, border-box;
 }
 
 .click {
@@ -132,7 +211,7 @@ a:visited {
 }
 
 .light {
-  font-weight: lighter;
+  font-weight: 300;
 }
 
 .mon {

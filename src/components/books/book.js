@@ -17,27 +17,27 @@ const Book = (props) => {
     <li key={id} className="bookLi d-flex">
       <div className="bookInfoContainer d-flex col">
         <div className="bookCoreInfo d-flex col">
-          <div><p>{category}</p></div>
-          <div><p>{title}</p></div>
-          <div><p>Author</p></div>
+          <div><p className="bookCategory bold">{category}</p></div>
+          <div><p className="bookTitle bold">{title}</p></div>
+          <div><p className="bookAuthor light">Author</p></div>
         </div>
         <div className="bookInfoActions d-flex">
-          <div>Comments</div>
-          <button type="button" name="removeBookButton" id={id} onClick={removeBookFromStore}>Remove</button>
-          <div>Edit</div>
+          <div className="click light">Comments</div>
+          <button className="bookRemoveButton light click" type="button" name="removeBookButton" id={id} onClick={removeBookFromStore}>Remove</button>
+          <div className="click light">Edit</div>
         </div>
       </div>
       <div className="bookProgressContainer d-flex">
         <div className="bookStats d-flex">
-          <div className="bookStatsCircle">Circle</div>
+          <div className="bookStatsCircle" />
           <div className="bookStatsMetricsContainer d-flex col">
             <div className="bookStatsMetricsNumber">64%</div>
             <div className="bookStatsMetricsStatus">Completed</div>
           </div>
         </div>
         <div className="bookChapterContainer d-flex col">
-          <div><p>CURRENT CHAPTER</p></div>
-          <div><p>Chapter 17</p></div>
+          <div><p className="bookChapterTitle">CURRENT CHAPTER</p></div>
+          <div><p className="bookCurrentChapter">Chapter 17</p></div>
           <button type="button">UPDATE PROGRESS</button>
         </div>
       </div>
