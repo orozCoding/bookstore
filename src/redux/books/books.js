@@ -21,7 +21,7 @@ const handleData = (data) => {
   return books;
 };
 
-export const getBooksAction = () => async (dispatch) => {
+const loadBooks = () => async (dispatch) => {
   const books = await getBooks();
 
   dispatch({
@@ -60,4 +60,6 @@ const reducer = (state = [], action) => {
   }
 };
 
-export { addBook, removeBook, reducer };
+export {
+  addBook, removeBook, reducer, loadBooks,
+};
