@@ -12,7 +12,7 @@ const Books = () => {
     dispatch(loadBooks());
   }, []);
   return (
-    <ul>
+    <ul id="bookList" className="bookList d-flex col">
       {
         booksList.map((book) => <Book key={book.id} book={book} />)
       }

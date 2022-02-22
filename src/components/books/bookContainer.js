@@ -2,7 +2,7 @@ import Books from './books';
 import Form from './form';
 
 const BookContainer = () => (
-  <div>
+  <div className="booksListContainer">
     <Books />
     <Form />
   </div>
