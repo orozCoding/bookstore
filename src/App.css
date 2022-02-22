@@ -161,6 +161,10 @@ a:visited {
   font-family: 'Roboto', sans-serif;
 }
 
+.bookChapterContainer button {
+  margin-top: 15px;
+}
+
 .bookInfoActions div:hover,
 .bookInfoActions button:hover {
   color: darkblue;
@@ -191,10 +195,6 @@ a:visited {
 .bookChapterContainer {
   gap: 5px;
   align-items: flex-start;
-}
-
-.bookChapterContainer button {
-  margin-top: 15px;
 }
 
 .bookChapterTitle {
