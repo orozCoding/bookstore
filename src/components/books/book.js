@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../../redux/books/books';
+import { deleteBook } from '../../api/api';
 
 const Book = (props) => {
   const { book } = props;
@@ -10,6 +11,7 @@ const Book = (props) => {
 
   const removeBookFromStore = (e) => {
     const { id } = e.target;
+    deleteBook(id);
     dispatch(removeBook(id));
   };
 

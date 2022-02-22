@@ -1,12 +1,38 @@
 const api = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/u3O07q7IoKorYetrv7Bf/books';
 
-const fetchBooks = (api) => {
-  const movie = fetch(api)
+const fetchBooks = () => {
+  const books = fetch(api)
     .then((response) => response.json())
     .then((data) => data);
-  return movie;
+  return books;
 };
 
-const getBooks = async () => fetchBooks(api);
+const postBook = async (id, title, category) => {
+  await fetch(api, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    body: JSON.stringify({
+      item_id: id,
+      title,
+      category,
+    }),
+  });
+};
 
-export default getBooks;
+const deleteBook = async (id) => {
+  await fetch(`${api}/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+    body: JSON.stringify({
+      item_id: id,
+    }),
+  });
+};
+
+const getBooks = async () => fetchBooks();
+
+export { getBooks, postBook, deleteBook };

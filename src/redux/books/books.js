@@ -1,10 +1,8 @@
-import getBooks from '../../api/api';
+import { getBooks } from '../../api/api';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const GET_BOOKS = 'bookStore/books/GET_BOOKS';
-
-// const initialState = [];
 
 const handleData = (data) => {
   const books = [];
@@ -36,7 +34,7 @@ export const addBook = (book) => ({
   type: ADD_BOOK,
   playload: {
     title: book.title,
-    author: book.author,
+    category: book.category,
     id: book.id,
   },
 });

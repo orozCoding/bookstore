@@ -9,7 +9,6 @@ const Books = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    console.log('running effect');
     dispatch(getBooksAction());
   }, []);
   console.log(booksList);
