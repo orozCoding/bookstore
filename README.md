@@ -14,7 +14,7 @@ Coming soon.
 
 ## Live Version
 
-Coming soon.
+[Netlify](https://silly-curie-8ccd0b.netlify.app/)
 
 ## Built With
 
