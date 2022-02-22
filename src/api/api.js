@@ -7,7 +7,8 @@ const fetchBooks = () => {
   return books;
 };
 
-const postBook = async (id, title, category) => {
+const postBook = async (book) => {
+  const { id, title, category } = book;
   await fetch(api, {
     method: 'POST',
     headers: {

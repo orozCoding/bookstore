@@ -1,4 +1,4 @@
-import { getBooks } from '../../api/api';
+import { getBooks, postBook, deleteBook } from '../../api/api';
 
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
@@ -30,29 +30,34 @@ export const getBooksAction = () => async (dispatch) => {
   });
 };
 
-export const addBook = (book) => ({
-  type: ADD_BOOK,
-  playload: {
-    title: book.title,
-    category: book.category,
-    id: book.id,
-  },
-});
+const addBook = (book) => async (dispatch) => {
+  const { id, title, category } = book;
+  dispatch({
+    type: ADD_BOOK,
+    playload: { id, title, category },
+  });
+  await postBook(book);
+};
 
-export const removeBook = (playload) => ({
-  type: REMOVE_BOOK,
-  playload,
-});
+const removeBook = (id) => async (dispatch) => {
+  dispatch({
+    type: REMOVE_BOOK,
+    playload: { id },
+  });
+  await deleteBook(id);
+};
 
-export const reducer = (state = [], action) => {
+const reducer = (state = [], action) => {
   switch (action.type) {
     case ADD_BOOK:
       return [...state, action.playload];
     case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.playload);
+      return state.filter((book) => book.id !== action.playload.id);
     case GET_BOOKS:
       return action.playload;
     default:
       return state;
   }
 };
+
+export { addBook, removeBook, reducer };

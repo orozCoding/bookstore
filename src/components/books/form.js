@@ -2,7 +2,6 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook } from '../../redux/books/books';
-import { postBook } from '../../api/api';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -12,7 +11,6 @@ const Form = () => {
     const id = uuidv4();
     const title = e.target.title.value;
     const category = e.target.category.value;
-    postBook(id, title, category);
     const newBook = {
       id,
       title,

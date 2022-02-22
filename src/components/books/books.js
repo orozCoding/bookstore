@@ -11,7 +11,6 @@ const Books = () => {
   useEffect(() => {
     dispatch(getBooksAction());
   }, []);
-  console.log(booksList);
   return (
     <ul>
       {
