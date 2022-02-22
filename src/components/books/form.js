@@ -31,6 +31,9 @@ const Form = () => {
           <option value="Drama">Drama</option>
           <option value="Comedy">Comedy</option>
           <option value="Thriller">Thriller</option>
+          <option value="Economy">Economy</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Documentary">Documentary</option>
         </select>
         <button type="submit" className="click">Add Book</button>
       </form>

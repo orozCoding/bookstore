@@ -15,6 +15,7 @@ body {
 }
 
 body {
+  background-color: #fafafa;
   overflow: scroll;
 }
 
@@ -243,6 +244,18 @@ a:visited {
 
 #newBookForm select {
   width: 25%;
+}
+
+.categoriesContainer {
+  color: darkgray;
+}
+
+.categoriesContainer p {
+  font-size: 50px;
+}
+
+.coneIcon {
+  font-size: 250px;
 }
 
 .click {
