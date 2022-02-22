@@ -1,8 +1,9 @@
 import React from 'react';
 
 const Categories = () => (
-  <div>
-    <p>Under construction</p>
+  <div className="categoriesContainer d-flex col mon">
+    <i className="bi bi-cone-striped coneIcon" />
+    <p className="bold">Under construction</p>
   </div>
 );
 

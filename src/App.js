@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <NavBar />
-      <div className="main d-flex col">
+      <div id="main" className="main d-flex col">
         <Routes>
           <Route
             path="/"

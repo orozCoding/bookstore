@@ -14,10 +14,33 @@ const Book = (props) => {
   };
 
   return (
-    <li key={id}>
-      <div><p>{title}</p></div>
-      <div><p>{category}</p></div>
-      <button type="button" name="removeBookButton" id={id} onClick={removeBookFromStore}>Remove</button>
+    <li key={id} className="bookLi d-flex">
+      <div className="bookInfoContainer d-flex col">
+        <div className="bookCoreInfo d-flex col">
+          <div><p className="bookCategory bold">{category}</p></div>
+          <div><p className="bookTitle bold">{title}</p></div>
+          <div><p className="bookAuthor light">Author</p></div>
+        </div>
+        <div className="bookInfoActions d-flex">
+          <div className="click light">Comments</div>
+          <button className="bookRemoveButton light click" type="button" name="removeBookButton" id={id} onClick={removeBookFromStore}>Remove</button>
+          <div className="click light">Edit</div>
+        </div>
+      </div>
+      <div className="bookProgressContainer d-flex">
+        <div className="bookStats d-flex">
+          <div className="bookStatsCircle" />
+          <div className="bookStatsMetricsContainer d-flex col">
+            <div className="bookStatsMetricsNumber">64%</div>
+            <div className="bookStatsMetricsStatus">Completed</div>
+          </div>
+        </div>
+        <div className="bookChapterContainer d-flex col">
+          <div><p className="bookChapterTitle">CURRENT CHAPTER</p></div>
+          <div><p className="bookCurrentChapter">Chapter 17</p></div>
+          <button type="button" className="click">UPDATE PROGRESS</button>
+        </div>
+      </div>
     </li>
   );
 };
